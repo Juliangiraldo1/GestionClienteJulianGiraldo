@@ -2,7 +2,7 @@ package com.clases;
 
 import java.util.List;
 
-public class Clientes {
+public class Clientes extends Producto {
     private String nombre;
     private String telefono;
     private String direccion;
@@ -39,4 +39,9 @@ public class Clientes {
     public void setProductos(List<Producto> productos) {
         this.productos = productos;
     }
+
+	@Override
+	public double ofertaValor() {
+		return (getValor()+10.000);
+	}
 }

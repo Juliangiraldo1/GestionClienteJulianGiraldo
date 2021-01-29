@@ -1,11 +1,23 @@
 package com.clases;
 
-public class Producto {
+public abstract class Producto {
     private String nombre;
     private String carateristicas;
     private String idProducto;
     private String condiciones;
+    private double valor;
+    
 
+    public double getValor() {
+		return valor;
+	}
+
+	public void setValor(double valor) {
+		this.valor = valor;
+	}
+
+	public abstract double ofertaValor();
+    
     public String getNombre() {
         return nombre;
     }
